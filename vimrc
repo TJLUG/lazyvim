@@ -1,92 +1,90 @@
 "===============================================================================
+" 基础设置
+"
 " Vi兼容模式
-" 是否允许按照Vi的方法使用Vim
-"set compatible " 启用
-set nocompatible " 不启用（默认）
+"set compatible " 兼容Vi模式
+set nocompatible " 不兼容Vi模式（默认）
 
-"===============================================================================
 " 文件类型检测
-" 可以根据不同的文件类型使用不同的配置和快捷键
-filetype on " 启用（默认）
-"filetype off " 不启用
+filetype on " 启用文件类型检测（默认）
+"filetype off " 关闭文件类型检测
 
-" 按照文件类型加载插件
-filetype plugin on " 启用（默认）
-"filetype plugin off " 不启用
+filetype plugin on " 启用文件类型插件（默认）
+"filetype plugin off " 关闭文件类型插件
 
-" 按照文件类型使用缩进
-filetype indent on " 启用（默认）
-"filetype indent off " 不启用
+filetype indent on " 启用文件类型缩进（默认）
+"filetype indent off " 关闭文件类型缩进
 
-"===============================================================================
-" 语法高亮
-" 启用后可以将文件类型中特有的字符用其他颜色显示
-syntax on " 启用（默认）
-"syntax off " 不启用
-
-"===============================================================================
-" 文件格式和编码
-" 编码
-set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+" 文件编码
+set encoding=utf-8 " Vim内部编码，主要针对Vim脚本等执行时使用
+set fileencoding=utf-8 " 设置当前缓冲区中文件的编码
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 " 读取文件时尝试使用的编码列表
 
 " 文件格式
-set fileformat=unix
-set fileformats=unix,dos,mac
+set fileformat=unix " 文件换行符
+set fileformats=unix,dos,mac " 读取文件时尝试文件换行符列表
+
+" 历史记录
+set history=500 " 最大历史记录数量500
+
+" 交换文件
+"set backup " 启用自动备份
+set nobackup " 关闭自动备份（默认）
 
 "===============================================================================
+" 显示设置
+"
+" 语法高亮
+syntax on " 启用语法高亮（默认）
+"syntax off " 关闭语法高亮
+
+" 行号
+set number " 显示行号（默认）
+"set nonumber " 不显示行号
+
 " 缩进
-set softtabstop=4
-set expandtab       " replace tab to whitespace.
-set tabstop=4       " show tab indent word space.
-set shiftwidth=4    " tab length
+set expandtab       " 使用空格替换Tab制表符
+set tabstop=4       " 缩进空格数
+set softtabstop=4   " 协调tabstop和标准8个空格缩进的差距，实际用制表符和空格模拟出4空格数的缩进
+set shiftwidth=4    " autoindent每次缩进的空格数
 
-set linebreak       " break full word.
-set autoindent      " new line indent same this line.
-set smartindent
+set autoindent      " 新行与上一行有相同的缩进
+set smartindent     " 根据代码语法自动添加缩进
 
-"===============================================================================
-" 分割窗口
-set splitright
-"set splitbelow
+" 高亮指示
+"set cursorline " 高亮指示光标所在行
+"set cursorcolumn " 高亮指示光标所在列
 
-"===============================================================================
 " 自动折叠
-set foldmethod=syntax
+set foldmethod=syntax " 按照语法实施折叠
 set foldlevel=6
 set foldcolumn=0
 
+" 滚动
+set scrolloff=5 " 距离边缘5行时提前滚动
+
+" 状态栏
+set laststatus=2
+"set statusline=%t\ %1*%m%*\ %1*%r%*\ %2*%h%*%w%=%l%3*/%l(%p%%)%*,%c%v]\ [%b:0x%b]\ [%{&ft==''?'text':toupper(&ft)},%{toupper(&ff)},%{toupper(&fenc!=''?&fenc:&enc)}%{&bomb?',bom':''}%{&eol?'':',noeol'}]
+"let &statusline=' %t %{&mod?(&ro?"*":"+"):(&ro?"=":" ")} %1*|%* %{&ft==""?"any":&ft} %1*|%* %{&ff} %1*|%* %{(&fenc=="")?&enc:&fenc}%{(&bomb?",bom":"")} %1*|%* %=%1*|%* 0x%b %1*|%* (%l,%c%v) %1*|%* %l %1*|%* %p'
+
+"===============================================================================
+" 操作设置
+"
+" 分割窗口
+" 关闭时，垂直分割窗口新窗口在左侧
+set splitright " 垂直分割窗口时，新窗口在右侧
+" 关闭时，水平分割窗口新窗口在上方
+set splitbelow " 水平分割窗口时，新窗口在下方
+
 " 大小写敏感设置
-set ignorecase
+set ignorecase " 搜索时忽略大小写
+"set noignorecase " 搜索时不忽略大小写
 set smartcase
-
-" 显示行号
-set number
-
-" fixed.
-set scrolloff=3
 
 " 设置宽度不明的文字(如 “”①②→ )为双宽度文本。
 " @see http://blog.sina.com.cn/s/blog_46dac66f010006db.html
 set ambiwidth=double
-
-" 高亮当前行
-set cursorline
-" 高亮当前列
-set cursorcolumn
-
-" 历史记录
-set history=500
-
-" 交换文件(swrap file)，自动备份(auto backup)设置。
-set nobackup
-
-" 状态栏。
-set laststatus=2
-"set statusline=%t\ %1*%m%*\ %1*%r%*\ %2*%h%*%w%=%l%3*/%L(%p%%)%*,%c%V]\ [%b:0x%B]\ [%{&ft==''?'TEXT':toupper(&ft)},%{toupper(&ff)},%{toupper(&fenc!=''?&fenc:&enc)}%{&bomb?',BOM':''}%{&eol?'':',NOEOL'}]
-"let &statusline=' %t %{&mod?(&ro?"*":"+"):(&ro?"=":" ")} %1*|%* %{&ft==""?"any":&ft} %1*|%* %{&ff} %1*|%* %{(&fenc=="")?&enc:&fenc}%{(&bomb?",BOM":"")} %1*|%* %=%1*|%* 0x%B %1*|%* (%l,%c%V) %1*|%* %L %1*|%* %P'
 
 " 自动换行。
 " NOTE: this setting will change text source.
