@@ -55,6 +55,10 @@ set smartindent     " 根据代码语法自动添加缩进
 "set cursorline " 高亮指示光标所在行
 "set cursorcolumn " 高亮指示光标所在列
 
+" 括号配对
+set showmatch " 光标在括号上时，高亮其配对括号（默认）
+"set noshowmatch " 光标在括号上时，不显示其配对括号
+
 " 自动折叠
 set foldmethod=syntax " 按照语法实施折叠
 set foldlevel=6
@@ -75,13 +79,24 @@ set splitright " 垂直分割窗口时，新窗口在右侧
 " 关闭时，水平分割窗口新窗口在上方
 set splitbelow " 水平分割窗口时，新窗口在下方
 
+" 设置宽度不明的文字(如 “”①②→ )为双宽度文本。
+" @see http://blog.sina.com.cn/s/blog_46dac66f010006db.html
+set ambiwidth=double " 作为双宽度文本（默认）
+"set ambiwidth=single " 作为单宽度文本
+
+"===============================================================================
+" 搜索设置
+"
 " 大小写敏感设置
 set ignorecase " 搜索时忽略大小写（默认）
 "set noignorecase " 搜索时不忽略大小写
 set smartcase "当搜索字符串有大写时，不忽略大小写（默认）
 "set nosmartcase "当搜索字符串有大写时，仍然忽略大小写
 
-" 设置宽度不明的文字(如 “”①②→ )为双宽度文本。
-" @see http://blog.sina.com.cn/s/blog_46dac66f010006db.html
-set ambiwidth=double " 作为双宽度文本（默认）
-"set ambiwidth=single " 作为单宽度文本
+" 搜索结果高亮
+set hlsearch " 高亮显示所有搜索结果（默认）
+"set nohlsearch " 不高亮显示搜索结果
+
+" 实时搜索
+set incsearch " 键入搜索字符串的同时搜索（默认）
+"set noincsearch " 键入搜索字符串完毕后搜索
