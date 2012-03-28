@@ -64,9 +64,7 @@ set foldcolumn=0
 set scrolloff=5 " 距离边缘5行时提前滚动
 
 " 状态栏
-set laststatus=2
-"set statusline=%t\ %1*%m%*\ %1*%r%*\ %2*%h%*%w%=%l%3*/%l(%p%%)%*,%c%v]\ [%b:0x%b]\ [%{&ft==''?'text':toupper(&ft)},%{toupper(&ff)},%{toupper(&fenc!=''?&fenc:&enc)}%{&bomb?',bom':''}%{&eol?'':',noeol'}]
-"let &statusline=' %t %{&mod?(&ro?"*":"+"):(&ro?"=":" ")} %1*|%* %{&ft==""?"any":&ft} %1*|%* %{&ff} %1*|%* %{(&fenc=="")?&enc:&fenc}%{(&bomb?",bom":"")} %1*|%* %=%1*|%* 0x%b %1*|%* (%l,%c%v) %1*|%* %l %1*|%* %p'
+set laststatus=2 " 在所有窗口显示状态栏
 
 "===============================================================================
 " 操作设置
@@ -78,47 +76,12 @@ set splitright " 垂直分割窗口时，新窗口在右侧
 set splitbelow " 水平分割窗口时，新窗口在下方
 
 " 大小写敏感设置
-set ignorecase " 搜索时忽略大小写
+set ignorecase " 搜索时忽略大小写（默认）
 "set noignorecase " 搜索时不忽略大小写
-set smartcase
+set smartcase "当搜索字符串有大写时，不忽略大小写（默认）
+"set nosmartcase "当搜索字符串有大写时，仍然忽略大小写
 
 " 设置宽度不明的文字(如 “”①②→ )为双宽度文本。
 " @see http://blog.sina.com.cn/s/blog_46dac66f010006db.html
-set ambiwidth=double
-
-" 自动换行。
-" NOTE: this setting will change text source.
-" set textwidth=80
-" set fo+=m
-
-" 共享系统剪贴板（yank的时候同时存储到剪贴板中）。
-"set clipboard+=unnamed
-
-" 设置窗口默认大小
-"set columns=80
-"set lines=30
-
-" 字体设置
-" @see http://support.microsoft.com/kb/306527/zh-cn
-" @see http://www.gracecode.com/archives/1545/
-" @see http://blog.xianyun.org/2009/09/14/vim-fonts.html
-"if g:OS#win
-"    set guifont=Courier_New:h12:cANSI
-"elseif g:OS#mac
-"    set guifont=Courier_New:h16
-"elseif g:OS#unix
-"endif
-
-" 持久化撤销设置。
-"if has("persistent_undo")
-"    set undofile
-"    set undolevels=1000
-"
-"    if g:OS#win
-"        set undodir=$VIM\undodir
-"        au BufWritePre undodir/* setlocal noundofile
-"    else
-"        set undodir=~/.undodir
-"        au BufWritePre ~/.undodir/* setlocal noundofile
-"    endif
-"endif
+set ambiwidth=double " 作为双宽度文本（默认）
+"set ambiwidth=single " 作为单宽度文本
