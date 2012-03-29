@@ -8,17 +8,15 @@ set nocompatible " 不兼容Vi模式（默认）
 " 文件类型检测
 filetype on " 启用文件类型检测（默认）
 "filetype off " 关闭文件类型检测
-
 filetype plugin on " 启用文件类型插件（默认）
 "filetype plugin off " 关闭文件类型插件
-
 filetype indent on " 启用文件类型缩进（默认）
 "filetype indent off " 关闭文件类型缩进
 
 " 文件编码
 set encoding=utf-8 " Vim内部编码，主要针对Vim脚本等执行时使用
 set fileencoding=utf-8 " 设置当前缓冲区中文件的编码
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 " 读取文件时尝试使用的编码列表
+set fileencodings=utf-8,ucs-bom,cp936,gb18030,big5,euc-jp,euc-kr,latin1 " 读取文件时尝试使用的编码列表
 
 " 文件格式
 set fileformat=unix " 文件换行符
@@ -100,3 +98,17 @@ set hlsearch " 高亮显示所有搜索结果（默认）
 " 实时搜索
 set incsearch " 键入搜索字符串的同时搜索（默认）
 "set noincsearch " 键入搜索字符串完毕后搜索
+
+"===============================================================================
+" 以下部分由脚本程序控制，请不要自行添加删除内容
+"===============================================================================
+"
+"===============================================================================
+" 自动加载模块配置文件
+let s:vimrc_dPath = $HOME . '/.vim/vimrc.d'
+let s:ext = 'vimrc'
+for s:vimrcFileExt in split(glob(s:vimrc_dPath .'/*.'. s:ext), "\n")
+    if !isdirectory(s:vimrcFileExt)
+        execute 'source '.s:vimrcFileExt
+    endif
+endfor
