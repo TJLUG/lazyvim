@@ -18,7 +18,7 @@ Offical Blog:   http://www.tjlug.net
 
 Mail List:      mailto://tjlug@googlegroups.com
 
-Git Repo:       https://github.com/TJLUG/lazyvim
+Git Repo:       https://github.com/TJLUG
 
 Contributor List
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
