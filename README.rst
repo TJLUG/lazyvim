@@ -14,11 +14,9 @@ Contributor
 -------------------------------------------------------------------------------
 Powered By Tianjin Linux User Group
 
-Offical Blog:   http://www.tjlug.net
-
-Mail List:      mailto://tjlug@googlegroups.com
-
-Git Repo:       https://github.com/TJLUG/lazyvim
+* Offical Blog:   http://www.tjlug.net
+* Mail List:      mailto://tjlug@googlegroups.com
+* Git Repo:       https://github.com/TJLUG
 
 Contributor List
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
