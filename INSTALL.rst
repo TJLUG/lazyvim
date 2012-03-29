@@ -17,7 +17,9 @@ Install lazyvim
 ..
 
     $ cd path/to/lazyvim
+
     $ chmod a+x install.sh
+
     $ ./install.sh
 
 Backup
