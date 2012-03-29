@@ -14,6 +14,8 @@ download lazyvim source code or checkout Git Repo
 
 Install lazyvim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..
+
 cd path/to/lazyvim
 chmod a+x install.sh
 ./install.sh
