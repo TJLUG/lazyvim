@@ -32,7 +32,6 @@ function handle_action
 
 function rollback_action
 {
-    echo "$HOME/.$1.$suffix"
     if [[ -e "$HOME/.$1.$suffix" ]]; then
         echo "ROLLBACK $HOME/.$1.$suffix -> $HOME/.$1"
         if [[ -e "$HOME/.$1" ]]; then
@@ -46,18 +45,17 @@ function rollback_action
 
 function rollback
 {
-    echo "START ROLLBACK!!"
     rollback_action vimrc
     rollback_action vim
-    echo "ROLLBACK COMPLETED!!"
 }
 
+# rollback
 if [[ "$1" == "rollback" ]]; then
-    rollback # this will cause an error and rollback function will run
+    rollback
     exit 0
 fi
 
-# install progress (atom)
+# install (atom)
 trap "rollback" INT TERM EXIT
 
 handle_action vimrc
