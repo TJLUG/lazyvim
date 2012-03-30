@@ -34,6 +34,7 @@ All sub configuration files' path is:
 There are a whole bunch of configuration files. You can enable or disable anyone.
 
 **Sub configuration file name**
+
 * *Enabled file name*: xxxxxx.vimrc
 * *Disabled file name*: xxxxxx.disable
 
