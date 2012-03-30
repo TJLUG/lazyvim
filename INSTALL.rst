@@ -22,6 +22,14 @@ Install lazyvim
 
     $ ./install.sh
 
+Uninstall lazyvim
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..
+
+    $ ./install.sh rollback
+
+    $ rm -rf path/to/lazyvim
+
 Backup
 -------------------------------------------------------------------------------
 Script named install.sh will backup your older user configration file ($HOME/.vimrc) to $HOME/.vimrc.old automatically.

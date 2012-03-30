@@ -10,6 +10,50 @@ Install *lazyvim*, you will get a basic configuration file of vim. As you like, 
 
 **WARNING FOR GEEK**: *lazyvim* builds for vim newbie and layz guys. So, if you are a **Geek** of vim. You can walk around other website for more funny or just sleeping. Or, help us to make *lazyvim* better!
 
+Configuration files
+-------------------------------------------------------------------------------
+
+Top level configuration file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The path of top level configuration file is:
+
+..
+
+    ~/.vimrc
+
+You can just modify it. If you want add some new configuration feature, there is a suggestion that is adding it to a sub configuration file.
+
+Sub configuration files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+All sub configuration files' path is:
+
+..
+
+    ~/.vim/vimrc.d/
+
+There are a whole bunch of configuration files. You can enable or disable anyone.
+
+**Sub configuration file name**
+
+* *Enabled file name*: xxxxxx.vimrc
+* *Disabled file name*: xxxxxx.disable
+
+**Enable sub configuration file**
+
+..
+
+    $ cd ~/.vim/vimrc.d/
+
+    $ ./rc_manager.sh enable name_of_sub_configuration_file.disable
+
+**Disable sub configuration file**
+
+..
+    
+    $ cd ~/.vim/vimrc.d/
+
+    $ ./rc_manager.sh disable name_of_sub_configuration_file.vimrc
+
 Contributor
 -------------------------------------------------------------------------------
 Powered By Tianjin Linux User Group
