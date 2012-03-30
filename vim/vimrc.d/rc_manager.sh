@@ -6,14 +6,15 @@ disableSuffix="disable"
 
 op="$1"
 realFileName="$2"
+# get real file name, no suffix
+if [[ -e "$realFileName" ]]; then
+    realFileName=`basename "$realFileName" ".$enableSuffix"`
+    realFileName=`basename "$realFileName" ".$disableSuffix"`
+fi
 
 case "$1" in
     # enable a vimrc configration file
     "enable")
-        if [[ -e "$realFileName" ]]; then
-            realFileName=`basename "$realFileName" ".$disableSuffix"`
-        fi
-
         if [[ -e "$realFileName.$disableSuffix" ]]; then
             mv "$realFileName.$disableSuffix" "$realFileName.$enableSuffix"
         else
@@ -24,10 +25,6 @@ case "$1" in
         ;;
     # disable a vimrc configration file
     "disable")
-        if [[ -e "$realFileName" ]]; then
-            realFileName=`basename "$realFileName" ".$enableSuffix"`
-        fi
-
         if [[ -e "$realFileName.$enableSuffix" ]]; then
             mv "$realFileName.$enableSuffix" "$realFileName.$disableSuffix"
         else
