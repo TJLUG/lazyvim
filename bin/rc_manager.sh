@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 set -o errexit
 
+rootDir="$HOME/.vim/vimrc.d"
 enableSuffix="vimrc"
 disableSuffix="disable"
 
 op="$1"
 realFileName="$2"
 # get real file name, no suffix
-if [[ -e "$realFileName" ]]; then
+if [[ -e "$rootDir/$realFileName" ]]; then
     realFileName=`basename "$realFileName" ".$enableSuffix"`
     realFileName=`basename "$realFileName" ".$disableSuffix"`
 fi
@@ -15,8 +16,8 @@ fi
 case "$1" in
     # enable a vimrc configration file
     "enable")
-        if [[ -e "$realFileName.$disableSuffix" ]]; then
-            mv "$realFileName.$disableSuffix" "$realFileName.$enableSuffix"
+        if [[ -e "$rootDir/$realFileName.$disableSuffix" ]]; then
+            mv "$rootDir/$realFileName.$disableSuffix" "$rootDir/$realFileName.$enableSuffix"
         else
             # no such file
             echo "No such file."
@@ -25,8 +26,8 @@ case "$1" in
         ;;
     # disable a vimrc configration file
     "disable")
-        if [[ -e "$realFileName.$enableSuffix" ]]; then
-            mv "$realFileName.$enableSuffix" "$realFileName.$disableSuffix"
+        if [[ -e "$rootDir/$realFileName.$enableSuffix" ]]; then
+            mv "$rootDir/$realFileName.$enableSuffix" "$rootDir/$realFileName.$disableSuffix"
         else
             # no such file
             echo "No such file."
