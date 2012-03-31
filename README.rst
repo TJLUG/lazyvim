@@ -17,7 +17,7 @@ Top level configuration file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The path of top level configuration file is:
 
-..
+.. code:: bash
 
     ~/.vimrc
 
@@ -27,7 +27,7 @@ Sub configuration files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 All sub configuration files' path is:
 
-..
+.. code:: bash
 
     ~/.vim/vimrc.d/
 
@@ -40,7 +40,7 @@ There are a whole bunch of configuration files. You can enable or disable anyone
 
 **Enable sub configuration file**
 
-..
+.. code:: bash
 
     $ cd ~/.vim/bin/
 
@@ -48,7 +48,7 @@ There are a whole bunch of configuration files. You can enable or disable anyone
 
 **Disable sub configuration file**
 
-..
+.. code:: bash
     
     $ cd ~/.vim/bin/
 
@@ -56,9 +56,10 @@ There are a whole bunch of configuration files. You can enable or disable anyone
 
 **Export to PATH**
 
-..
+.. code:: bash
 
     $ export PATH=$PATH:path/to/lazyvim/bin
+
 
 Contributor
 -------------------------------------------------------------------------------
