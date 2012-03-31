@@ -112,3 +112,6 @@ for s:vimrcFileExt in split(glob(s:vimrc_dPath .'/*.'. s:ext), "\n")
         execute 'source '.s:vimrcFileExt
     endif
 endfor
+
+" Pathogen
+call pathogen#infect()
