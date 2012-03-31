@@ -42,7 +42,7 @@ There are a whole bunch of configuration files. You can enable or disable anyone
 
 ..
 
-    $ cd ~/.vim/vimrc.d/
+    $ cd ~/.vim/bin/
 
     $ ./rc_manager.sh enable name_of_sub_configuration_file.disable
 
@@ -50,9 +50,16 @@ There are a whole bunch of configuration files. You can enable or disable anyone
 
 ..
     
-    $ cd ~/.vim/vimrc.d/
+    $ cd ~/.vim/bin/
 
     $ ./rc_manager.sh disable name_of_sub_configuration_file.vimrc
+
+**Export to PATH**
+
+..
+
+    $ export PATH=$PATH:path/to/lazyvim/bin
+
 
 Contributor
 -------------------------------------------------------------------------------
