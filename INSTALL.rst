@@ -10,7 +10,17 @@ Install
 
 Get lazyvim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-download lazyvim source code or checkout Git Repo
+# download lazyvim source code or clone Git Repo
+..
+
+    $ git clone git://github.com/TJLUG/lazyvim.git
+
+# download submodule of vim plugins.
+..
+
+    $ cd path/to/lazyvim
+    $ git submodule init
+    $ git submodule update
 
 Install lazyvim
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
