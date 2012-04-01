@@ -60,10 +60,13 @@ There are a whole bunch of configuration files. You can enable or disable anyone
 
     $ export PATH=$PATH:path/to/lazyvim/bin
 
+Plugins
+-------------------------------------------------------------------------------
+See PLUGINS.rst for plugins introduction.
 
 Contributor
 -------------------------------------------------------------------------------
-Powered By Tianjin Linux User Group
+Powered by Tianjin Linux User Group
 
 * Offical Blog:   http://www.tjlug.net
 * Mail List:      mailto://tjlug@googlegroups.com
