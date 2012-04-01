@@ -25,6 +25,12 @@ set history=500 " 最大历史记录数量500
 " 交换文件
 set nobackup " 关闭自动备份
 
+" 将map leader改为逗号
+let mapleader = ","
+
+" 保存vimrc文件后自动生效
+au BufWritePost .vimrc source $HOME/.vimrc
+
 "===============================================================================
 " 显示设置
 "
@@ -94,7 +100,10 @@ set incsearch " 键入搜索字符串的同时搜索
 "===============================================================================
 " 以下部分由脚本程序控制，请不要自行添加删除内容
 "===============================================================================
-"
+
+" 启用Pathogen
+call pathogen#infect()
+
 "===============================================================================
 " 自动加载模块配置文件
 let s:vimrc_dPath = $HOME . '/.vim/vimrc.d'
@@ -104,6 +113,3 @@ for s:vimrcFileExt in split(glob(s:vimrc_dPath .'/*.'. s:ext), "\n")
         execute 'source '.s:vimrcFileExt
     endif
 endfor
-
-" Pathogen
-call pathogen#infect()
