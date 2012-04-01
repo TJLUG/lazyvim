@@ -19,7 +19,9 @@ Get lazyvim
 ..
 
     $ cd path/to/lazyvim
+
     $ git submodule init
+
     $ git submodule update
 
 Install lazyvim
