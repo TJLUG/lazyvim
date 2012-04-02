@@ -32,12 +32,26 @@ Q&A
 Plugins List
 -------------------------------------------------------------------------------
 
+* solarized
+
+  * link: https://github.com/altercation/vim-colors-solarized
+
+..
+
+    一个vim配色方案。
+
 * neocomplcache
+
+  * link: https://github.com/Shougo/neocomplcache
+
 ..
 
     可以在输入的时候自动记录当前文件输入过的词组，当第二次输入时自动匹配，让用户选择需要的词组。支持中英文，有效避免程序员拼写错误。唯一缺陷就是只能同时分析一个文件，如果是一个项目就没法自动补全了。
 
 * snipmate
+
+  * link: https://github.com/msanders/snipmate.vim
+
 ..
 
     MAC下有个非常好用的编辑器TextMate，其中一项杀手级功能就是文本片段生成。当然，对于强大的vim来说，安装一下snipmate就实现这个功能了。将你常用的文本片段写入snippets文件，然后给他们起个短小的名字。等你在相同类型的文件中输入这个短小的名字后，按下<Tab>键。见证奇迹的时刻啊！那大段的文字就出现了！
