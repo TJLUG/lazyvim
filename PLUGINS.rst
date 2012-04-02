@@ -81,5 +81,5 @@ Plugins List
 
 ..
 
-    minibufexpl用来管理打开的buffer，vim可以同时打开多个文件，每个文件占用一个buffer。 *lazyvim* 使用,be来打开buffer管理器。处于稳定性的考虑，使用了6.3.2版本，等新版本稳定了再做升级。
+    minibufexpl用来管理打开的buffer，vim可以同时打开多个文件，每个文件占用一个buffer。 *lazyvim* 使用,be来打开buffer管理器。出于稳定性的考虑，使用了6.3.2版本，等新版本稳定了再做升级。
 
