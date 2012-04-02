@@ -74,3 +74,11 @@ Plugins List
 
     netrw是一个文件管理器， *lazyvim* 使用,fe打开文件管理器窗口。配合实时搜索使用，查找打开文件效率极高，这两个选项在 *lazyvim* 中都默认打开了。
 
+* minibufexpl
+
+  * link: https://github.com/fholgado/minibufexpl.vim
+
+..
+
+    minibufexpl用来管理打开的buffer，vim可以同时打开多个文件，每个文件占用一个buffer。 *lazyvim* 使用,be来打开buffer管理器。
+
