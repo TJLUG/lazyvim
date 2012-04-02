@@ -3,6 +3,9 @@
 " 启动开启neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 
+" 显示列表的长度，剩余匹配部分会通过下拉菜单给出
+let g:neocomplcache_max_list = 8
+
 " 开启智能匹配
 let g:neocomplcache_enable_smart_case = 1
 " 开启驼峰匹配
