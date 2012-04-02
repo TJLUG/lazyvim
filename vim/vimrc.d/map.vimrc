@@ -19,6 +19,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 " 将Y的行为和D一致，操作到行尾
+" D为删除到行尾
+" Y应该是复制到行尾
 map Y y$
 
 " 对于自动换行的行采取相同的光标移动方式，不是按j或k时直接跳到下一行
@@ -27,3 +29,11 @@ nnoremap k gk
 
 " 快速切换回上一次编辑的buffer
 nnoremap <Leader><Leader> <C-^>
+
+" 将搜索结果保持在vim窗口中间显示
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+nnoremap <silent> g# g#zz
