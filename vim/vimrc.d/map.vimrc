@@ -35,6 +35,11 @@ nnoremap <F1> <Nop>
 inoremap <F1> <Nop>
 vnoremap <F1> <Nop>
 
+" buffer控制快捷键
+nnoremap <Leader>bd :bd<CR> " 关闭当前buffer
+nnoremap <Leader>bp :bp<CR> " 下一个buffer
+nnoremap <Leader>bn :bn<CR> " 上一个buffer
+
 " 切换窗口
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
