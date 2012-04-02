@@ -66,3 +66,11 @@ Plugins List
 
     这些名字都在snippets目录中，文件名代表一种文件格式。例如c.snippets就是所有可以用来编写c语言源代码*.c文件时可以使用的简写名字。如果有需要，你可以任意添加、删除、修改这写片段，方法可以看帮助文档。
 
+* netrw
+
+  * link: http://www.vim.org/scripts/script.php?script_id=1075
+
+..
+
+    netrw是一个文件管理器， *lazyvim* 使用,fe打开文件管理器窗口。配合实时搜索使用，查找打开文件效率极高，这两个选项在 *lazyvim* 中都默认打开了。
+
