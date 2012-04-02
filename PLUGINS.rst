@@ -76,9 +76,10 @@ Plugins List
 
 * minibufexpl
 
-  * link: https://github.com/fholgado/minibufexpl.vim
+  * old version link (version < 6.3.2): http://www.vim.org/scripts/script.php?script_id=159
+  * new version link (version > 6.3.7): https://github.com/fholgado/minibufexpl.vim
 
 ..
 
-    minibufexpl用来管理打开的buffer，vim可以同时打开多个文件，每个文件占用一个buffer。 *lazyvim* 使用,be来打开buffer管理器。
+    minibufexpl用来管理打开的buffer，vim可以同时打开多个文件，每个文件占用一个buffer。 *lazyvim* 使用,be来打开buffer管理器。处于稳定性的考虑，使用了6.3.2版本，等新版本稳定了再做升级。
 
